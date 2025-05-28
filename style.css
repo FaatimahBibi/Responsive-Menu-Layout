@@ -1,0 +1,77 @@
+/* Global styles */
+* {
+  box-sizing: border-box;
+  background-color: rgb(213, 163, 163);
+}
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 20px;
+}
+
+h1 {
+  text-align: center;
+  font-size: 2em;
+  margin-bottom: 40px;
+}
+p {
+  background-color: #e0e0e0;
+}
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+/* Menu section styling */
+.menu-section {
+  border: 1px solid black;
+  background-color: #e0e0e0;
+  padding: 50px 20px 20px 20px;
+  position: relative;
+  flex: 1 1 100%; /* Mobile default: full width */
+}
+
+.section-title {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: #ccc;
+  padding: 5px 15px;
+  border: 1px solid black;
+  font-size: 1.25em;
+  font-weight: bold;
+}
+
+/* Section-specific colors */
+.chicken .section-title {
+  background-color: rgb(192, 107, 121);
+}
+
+.beef .section-title {
+  background-color: red;
+  color: white;
+}
+
+.sushi .section-title {
+  background-color: gold;
+}
+
+/* Tablet layout (≥768px and ≤991px) */
+@media (min-width: 768px) and (max-width: 991px) {
+  .menu-section {
+    flex: 1 1 48%;
+  }
+
+  .menu-section:nth-child(3) {
+    flex: 1 1 100%;
+  }
+}
+
+/* Desktop layout (≥992px) */
+@media (min-width: 992px) {
+  .menu-section {
+    flex: 1 1 31%;
+  }
+}
